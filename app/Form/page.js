@@ -40,7 +40,7 @@ export default function Form() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 border rounded-lg shadow-md">
+    <div className="max-w-md mx-auto mt-10 p-6 border rounded-lg shadow-md bg-white dark:bg-gray-800 dark:text-white">
       <h1 className="text-2xl font-bold mb-4 text-center">Contact Form</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
@@ -50,7 +50,7 @@ export default function Form() {
           value={form.name}
           onChange={handleChange}
           required
-          className="w-full px-4 py-2 border rounded"
+          className="w-full px-4 py-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white"
         />
         <input
           type="email"
@@ -59,7 +59,7 @@ export default function Form() {
           value={form.email}
           onChange={handleChange}
           required
-          className="w-full px-4 py-2 border rounded"
+          className="w-full px-4 py-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white"
         />
         <textarea
           name="message"
@@ -68,12 +68,12 @@ export default function Form() {
           onChange={handleChange}
           required
           rows={4}
-          className="w-full px-4 py-2 border rounded"
+          className="w-full px-4 py-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white"
         />
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+          className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
         >
           {loading ? "Sending..." : "Submit"}
         </button>

@@ -40,8 +40,8 @@ export default function Form() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 border rounded-lg shadow-md bg-white dark:bg-gray-800 dark:text-white">
-      <h1 className="text-2xl font-bold mb-4 text-center">Contact Form</h1>
+    <div className="max-w-md mx-auto mt-10 p-6 border rounded-lg shadow-lg bg-white dark:bg-gray-900 dark:text-gray-100">
+      <h1 className="text-2xl font-semibold mb-4 text-center text-gray-900 dark:text-gray-200">Contact Form</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"
@@ -50,7 +50,7 @@ export default function Form() {
           value={form.name}
           onChange={handleChange}
           required
-          className="w-full px-4 py-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+          className="w-full px-4 py-3 border border-gray-300 rounded-md dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
         />
         <input
           type="email"
@@ -59,7 +59,7 @@ export default function Form() {
           value={form.email}
           onChange={handleChange}
           required
-          className="w-full px-4 py-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+          className="w-full px-4 py-3 border border-gray-300 rounded-md dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
         />
         <textarea
           name="message"
@@ -68,16 +68,16 @@ export default function Form() {
           onChange={handleChange}
           required
           rows={4}
-          className="w-full px-4 py-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+          className="w-full px-4 py-3 border border-gray-300 rounded-md dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
         />
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
+          className="w-full py-3 rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition duration-300"
         >
           {loading ? "Sending..." : "Submit"}
         </button>
-        {status && <p className="text-center mt-2">{status}</p>}
+        {status && <p className="text-center mt-2 text-sm text-gray-600 dark:text-gray-300">{status}</p>}
       </form>
     </div>
   );

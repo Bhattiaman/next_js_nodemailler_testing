@@ -27,17 +27,19 @@ body {
 }
 
 body.dark {
-  background-color: #121212;
-  color: white;
+  background-color: #181818; /* Dark gray background for the entire body */
+  color: #f1f1f1; /* Soft white text */
 }
 
-/* Dark mode for form */
-.dark .bg-white {
-  background-color: #1f1f1f; /* Dark background for forms */
+/* Optional: Dark mode customization for other components globally */
+body.dark .bg-white {
+  background-color: #2d2d2d; /* Dark gray background for sections */
 }
 
-.dark .text-white {
-  color: white; /* Text color in dark mode */
+body.dark .text-gray-100 {
+  color: #e0e0e0; /* Soft white text in dark mode */
 }
 
-/* More customizations can go here for other elements */
+body.dark .text-gray-600 {
+  color: #888; /* Lighter gray text in dark mode */
+}

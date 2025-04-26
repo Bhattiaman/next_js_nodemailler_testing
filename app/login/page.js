@@ -28,7 +28,7 @@ export default function LoginPage() {
           localStorage.setItem("email", email);
           localStorage.setItem("token", res.token);
         }
-        
+
         alert("Welcome back!"); // Replaced toast with alert
         setTimeout(() => router.push("/"), 1000);
       } else {
@@ -81,13 +81,13 @@ export default function LoginPage() {
               />
             </div>
             <Link href="/" className="text-sm text-indigo-600 hover:underline">
-            <button
-              
-              type="submit"
-              className="w-full py-2.5 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition duration-200 shadow-md"
-            >
-              Sign In
-            </button>
+              <button
+
+                type="submit"
+                className="w-full py-2.5 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition duration-200 shadow-md"
+              >
+                Sign In
+              </button>
             </Link>
           </form>
 
@@ -96,7 +96,7 @@ export default function LoginPage() {
               Forgot password?
             </Link>
             <p className="mt-4">
-              Don't have an account?{" "}
+              Don&apos;t have an account?{" "}
               <Link href="/signup" className="text-indigo-600 font-medium hover:underline">
                 Create New Account
               </Link>
